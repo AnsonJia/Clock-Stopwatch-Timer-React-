@@ -17,16 +17,19 @@ function Clock(){
     }, []
     );
 
+    useEffect(() => {
+        document.title = formatTime(false); 
+    }, [time]);
 
-    function formatTime(){
+    function formatTime(showSecs: boolean = true) {
         let hours = time.getHours();
         const mins = time.getMinutes();
         const secs = time.getSeconds();
         const meridiem = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12 || 12;
 
-        hours = hours%12 || 12;
-
-        return `${padZero(hours)}:${padZero(mins)}:${padZero(secs)} ${meridiem}`;
+        const base = `${padZero(hours)}:${padZero(mins)}`;
+        return showSecs ? `${base}:${padZero(secs)} ${meridiem}` : `${base} ${meridiem}`;
     }
     function padZero(number:number){
         return (number < 10 ? "0" : "")+number;
