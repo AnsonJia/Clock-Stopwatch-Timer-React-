@@ -1,0 +1,9 @@
+body{
+    background-image: url(assets/background.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+}
