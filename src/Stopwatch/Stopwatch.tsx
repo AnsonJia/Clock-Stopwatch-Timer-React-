@@ -9,10 +9,8 @@ function Stopwatch(){
     const startTimeRef = useRef(0);
 
     useEffect(() => {
-        const favicon = document.getElementById("favcon") as HTMLLinkElement | null;
-        if (favicon) {
+        const favicon = document.getElementById("favcon") as HTMLLinkElement;
             favicon.href = newFavicon;
-        }
     }, []);
 
     useEffect(()=>{
