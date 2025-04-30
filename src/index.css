@@ -7,3 +7,8 @@ body{
     overflow: hidden;
     height: 100vh;
 }
+
+@font-face {
+    font-family: 'digital';
+    src: url('./src/assets/digital-7%20(mono%20italic).ttf') format('truetype');
+}
