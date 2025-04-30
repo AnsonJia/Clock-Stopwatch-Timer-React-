@@ -1,10 +1,18 @@
 import styles from './Clock.module.css'
 import { useState, useEffect } from "react";
+import newFavicon from '../assets/time-outline.svg';
 
 function Clock(){
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const[time, setTime] = useState(new Date());
+
+    useEffect(() => {
+            const favicon = document.getElementById("favcon") as HTMLLinkElement | null;
+            if (favicon) {
+                favicon.href = newFavicon;
+            }
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -45,9 +53,7 @@ function Clock(){
     }
 
     return(<div className={styles.clockContainer}>
-        <div className={styles.clock}>
-            <span>{formatTime()}</span>
-        </div>
+        <div className={styles.clock}>{formatTime()}</div>
         <br/>
         <div className={styles.date}>{date()}</div>
     </div>

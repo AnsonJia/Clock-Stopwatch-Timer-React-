@@ -6,10 +6,6 @@
     height: 100vh;
 }
 
-@font-face {
-    font-family: 'digital';
-    src: url('../assets/digital-7%20(mono%20italic).ttf') format('truetype');
-}
 .clock{
     font-family: 'digital';
     font-size: 11rem;
