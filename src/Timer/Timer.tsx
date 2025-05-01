@@ -69,15 +69,15 @@ function Timer(){
         <div className={styles.format}>
             <div className={styles.timer}> 
                 <div className={styles.display}>{formatTime()}</div>
-                <div>
-                    <div>
+                <div className={styles.buttons}>
+                    <div className={styles.addsub}>
                         <button onClick={() => decr(60*1000*5)} className={styles.time}>-5:00</button>
                         <button onClick={() => decr(60*1000)} className={styles.time}>-1:00</button>
                         <button onClick={() => incr(60*1000)} className={styles.time}>+1:00</button>
                         <button onClick={() => incr(60*1000*5)} className={styles.time}>+5:00</button>
                     </div>
                     
-                    <div  className={styles.controls}>
+                    <div className={styles.controls}>
                         <button onClick={start} className={styles.start}>Start</button>
                         <button onClick={stop} className={styles.stop}>Stop</button>
                         <button onClick={reset} className={styles.reset}>Reset</button>
