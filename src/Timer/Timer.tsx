@@ -15,8 +15,15 @@ function Timer(){
     }, []);
 
     useEffect(()=>{
-        if (isRunning && timeLeft>0){
-            intervalIdRef.current = setInterval(()=>{setTimeLeft(endTimeRef.current - Date.now())}, 100);
+        if (isRunning){
+            intervalIdRef.current = setInterval(()=>{
+                const remainTime = endTimeRef.current - Date.now();
+                if(remainTime <=0 ){
+                    setIsRunning(false);
+                }else{
+                    setTimeLeft(remainTime);
+                }
+            }, 10);
         }
 
         return()=>{
@@ -70,13 +77,14 @@ function Timer(){
             <div className={styles.timer}> 
                 <div className={styles.display}>{formatTime()}</div>
                 <div className={styles.buttons}>
+                    {!isRunning&&(
                     <div className={styles.addsub}>
                         <button onClick={() => decr(60*1000*5)} className={styles.time}>-5:00</button>
                         <button onClick={() => decr(60*1000)} className={styles.time}>-1:00</button>
                         <button onClick={() => incr(60*1000)} className={styles.time}>+1:00</button>
                         <button onClick={() => incr(60*1000*5)} className={styles.time}>+5:00</button>
                     </div>
-                    
+                    )}
                     <div className={styles.controls}>
                         <button onClick={start} className={styles.start}>Start</button>
                         <button onClick={stop} className={styles.stop}>Stop</button>
