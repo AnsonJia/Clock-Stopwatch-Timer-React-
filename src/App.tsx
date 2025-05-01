@@ -12,7 +12,7 @@ function App() {
         <Sidebar />
         <div>
           <Routes>
-            
+            <Route path="/" element={<Navigate to="/clock" />} />
             <Route path="/clock" element={<Clock />} />
             <Route path="/stopwatch" element={<Stopwatch />} />
             <Route path="/timer" element={<Timer />} />
