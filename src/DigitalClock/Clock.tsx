@@ -8,10 +8,8 @@ function Clock(){
     const[time, setTime] = useState(new Date());
 
     useEffect(() => {
-            const favicon = document.getElementById("favcon") as HTMLLinkElement | null;
-            if (favicon) {
+            const favicon = document.getElementById("favcon") as HTMLLinkElement;
                 favicon.href = newFavicon;
-            }
     }, []);
 
     useEffect(() => {
