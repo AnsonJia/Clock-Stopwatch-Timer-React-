@@ -7,8 +7,6 @@
     border: none;
     transition: all 0.5s ease;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
   
 .item {
@@ -42,11 +40,9 @@
 
 .open {
     width: 90px;
-   
 }
 
 .open .item{
-    
     opacity: 1;
     transform: translateX(0);
 }
@@ -56,7 +52,11 @@
     overflow: hidden;
 }
 
+
+
 .openbtn {
+   
+    position: absolute;
     background: transparent;
     border: 1px solid white; 
     border-radius: 10px;
@@ -65,12 +65,14 @@
     font-size: 1.5rem; 
     cursor: pointer;
     width: 70px;
-    position: absolute;
-    top: 10px;
     left: 10px;
     background-color: rgba(211, 211, 211, 0.2);
+    transition: all 0.5s ease;
 }
 .openbtn:hover {
     transform: scale(1.1); 
     background-color: rgba(146, 146, 146, 0.2);
+}
+.isopen{
+    left: 100px;
 }

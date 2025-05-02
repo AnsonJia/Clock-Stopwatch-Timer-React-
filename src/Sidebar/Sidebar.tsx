@@ -15,7 +15,7 @@ function Sidebar() {
     
     
     
-    <button className={styles.openbtn} onClick={()=>setIsOpen(prev => !prev)}>&#9776;</button>
+    <button className={`${styles.openbtn} ${isOpen ? styles.isopen : ''}`} onClick={()=>setIsOpen(prev => !prev)}>&#9776;</button>
     
     
    
