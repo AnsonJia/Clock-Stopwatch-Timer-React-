@@ -5,22 +5,30 @@
     background-color: rgba(211, 211, 211, 0.2);
     backdrop-filter: blur(5px);
     border: none;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
   
-.sidebar .item {
+.item {
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 90px;
     height: 100px; 
+    width: 90px;
     color: rgb(255, 255, 255); 
     font-size: 12px; 
     font-family: Arial;
-    border: 0.5px solid white; 
-    transition: all 0.5s ease; 
+    border: 0.5px solid white;
+    box-sizing: border-box;
     text-decoration: none;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease;
 }
 
 .sidebar img{
@@ -31,4 +39,38 @@
     background-color: #00000062; 
     transform: scale(1.03);
 }
+
+.open {
+    width: 90px;
+   
+}
+
+.open .item{
+    
+    opacity: 1;
+    transform: translateX(0);
+}
   
+.closed {
+    width: 0;
+    overflow: hidden;
+}
+
+.openbtn {
+    background: transparent;
+    border: 1px solid white; 
+    border-radius: 10px;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 1.5rem; 
+    cursor: pointer;
+    width: 70px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(211, 211, 211, 0.2);
+}
+.openbtn:hover {
+    transform: scale(1.1); 
+    background-color: rgba(146, 146, 146, 0.2);
+}
