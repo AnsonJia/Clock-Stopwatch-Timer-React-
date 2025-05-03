@@ -9,21 +9,21 @@ function Sidebar() {
     <>
       <div className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
         <Link to="/clock" className={styles.item}>
-        <div className={styles.content}>
-        <img src='./src/assets/time-outline.svg'/>Time
-        </div>
+          <div className={styles.content}>
+            <img src='./src/assets/time-outline.svg'/>Time
+          </div>
         </Link>
         
         <Link to="/stopwatch" className={styles.item}>
-        <div className={styles.content}>
-        <img src='./src/assets/stopwatch-svgrepo-com.svg'/>Stopwatch
-        </div>
+          <div className={styles.content}>
+            <img src='./src/assets/stopwatch-svgrepo-com.svg'/>Stopwatch
+          </div>
         </Link>
         
         <Link to="/timer" className={styles.item}>
-        <div className={styles.content}>
-        <img src='./src/assets/timer-outline.svg'/>Timer
-        </div>
+          <div className={styles.content}>
+            <img src='./src/assets/timer-outline.svg'/>Timer
+          </div>
         </Link>
 
       </div>
