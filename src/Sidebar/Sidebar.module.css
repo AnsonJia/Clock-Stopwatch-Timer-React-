@@ -87,3 +87,7 @@
 .isopen{
     left: 100px;
 }
+
+.active {
+    background-color: #29292980; 
+}
