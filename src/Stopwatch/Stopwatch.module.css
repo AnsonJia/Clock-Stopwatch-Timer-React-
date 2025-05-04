@@ -74,12 +74,10 @@
     .display{
         font-size: 5rem;
         margin-bottom: 10px;
-        
     }
     .stopwatch button{
         font-size: 1.5rem;
         min-width: 100px;
-        
     }
     
 }
@@ -88,12 +86,10 @@
     .display{
         font-size: 4.5rem;
         margin-bottom: 5px;
-        
     }
     .stopwatch button{
         font-size: 1.2rem;
         min-width: 80px;
-        
     }
     
 }

@@ -47,10 +47,7 @@ function Timer(){
         if (timeLeft > 0){
             setIsRunning(true);
             endTimeRef.current = Date.now() + timeLeft;
-        } 
-
-        
-            
+        }   
     }
     function stop(){
         setIsRunning(false);
@@ -90,14 +87,9 @@ function Timer(){
                         <button onClick={stop} className={styles.stop}>Stop</button>
                         <button onClick={reset} className={styles.reset}>Reset</button>
                     </div>
-                    
-                    
                 </div>
             </div>
         </div>
-
-
-
     );
 
 }

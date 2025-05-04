@@ -27,16 +27,15 @@ function Stopwatch(){
         document.title = formatTime(false); 
     }, [elapsedTime]);
 
+
     function start(){
         setIsRunning(true);
         startTimeRef.current = Date.now() - elapsedTime;
     }
-
     function stop(){    
         setIsRunning(false);
 
     }
-
     function reset(){
         setElapsedTime(0);
         setIsRunning(false);
